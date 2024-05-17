@@ -1,0 +1,31 @@
+// _main-pokemons.scss
+.main-pokemons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    
+  }
+  
+  .pokemon-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    
+    img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      margin: 5px 0;
+    }
+  }
+  
+  .main-pokemons{
+    margin-bottom: 100px;
+  }
