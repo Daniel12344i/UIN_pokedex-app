@@ -1,6 +1,39 @@
 @import './variables';
 @import './mixins';
 
+// teams css
+.team-item img{
+  width: 310px;
+  height: 340px;
+ 
+}
+
+.team-item a, h2{
+  text-decoration: none;
+  
+ 
+}
+
+.team-item a:hover{
+  transform: scale(1.05);
+
+}
+
+.team-item h2{
+  text-align: center;
+
+}
+.teams-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.teams-title{
+  display: flex;
+  justify-content: center;
+}
+
 .types-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -41,3 +74,6 @@
   &.dark { background-color: #d3cae3; }
   &.fairy { background-color: #f9dbf6; }
 }
+
+
+

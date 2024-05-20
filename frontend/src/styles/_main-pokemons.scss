@@ -7,11 +7,11 @@
   }
   
   .pokemon-card {
-    background-color: #fff;
+    background-color: #E5E4E2;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: inherit;
     
@@ -28,4 +28,20 @@
   
   .main-pokemons{
     margin-bottom: 100px;
+  }
+
+  .main-pokemons h1{
+    padding: 0px 10px;
+    font-size:30px;
+  }
+
+  .team-item a, h2{
+    color: black;
+    
+  }
+
+ 
+
+  .type-card{
+    text-decoration: none;
   }

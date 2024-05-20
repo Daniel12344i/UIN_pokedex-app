@@ -6,12 +6,50 @@
     padding: 20px;
     background-color: $secondary-color;
     box-shadow: $box-shadow;
+    flex-wrap: wrap;
+   
   
     .logo {
-      font-size: $font-size-large;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+     
+    }
+
+    .logo a{
+      font-weight: bold;
+
+    }
+
+    nav ul {
+      list-style: none;
+
+      
+    }
+    
+    .header li {
+      display: inline; /* This will make the list items display inline */
+      margin-right: 20px; /* Add some space between the items */
+     
+    }
+
+    nav ul li a{
+      font-size: 20px;
       font-weight: bold;
     }
   
+
+    .header-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .header-link:hover {
+      text-decoration: underline; 
+    }
+    
+
     .nav a {
       margin-right: 20px;
       text-decoration: none;
@@ -21,12 +59,13 @@
   
     .search {
       display: flex;
+      margin-left: 340px;
   
       input {
-        padding: 5px;
-        margin-right: 10px;
+        padding: 15px 100px;
+       
         border: 1px solid #ccc;
-        border-radius: 4px;
+        border-radius: 10px;
       }
   
       button {
@@ -39,4 +78,116 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .header .search{
+      margin-left: 0px;
+
+
+    }
+
+    .main-pokemons h1{
+      text-align: center;
+    }
+
+    .team-item a, h2{
+      text-align: center;
+    }
+
+    .app-body{
+      margin: 10px 70px;
+    }
+  }
   
+  @media (max-width: 1115px) {
+    .header .search{
+      margin-left: 40px;
+
+    }
+  }
+
+  
+
+
+  // team css
+
+  .team-component-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .team-image{
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+  }
+  
+  .team-image:hover{
+      transform: scale(1.05);
+  }
+  .type-page .type-header .type-icon{
+    display: none;
+  }
+
+  .team-pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  
+  
+  }
+  
+  .team-pokemon-card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-pokemon-name {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .team-pokemon-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .team-pokemon-link:hover {
+    text-decoration: underline;
+  }
+  
+  .team-pokemon-image {
+    width: 100px;
+    height: 100px;
+    
+  }
+  
+  .team-pokemon-id {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .team-pokemon-card {
+      width: 250px;
+      padding: 10px;
+    }
+  
+    .team-pokemon-image {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+

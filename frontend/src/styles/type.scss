@@ -3,27 +3,9 @@
 
 .type-page {
   padding: 20px;
+  background-color: #fff; // Set the main background to white
   @include flex-center;
   flex-direction: column;
-
-  &.normal { background-color: $color-normal; }
-  &.fighting { background-color: $color-fighting; }
-  &.flying { background-color: $color-flying; }
-  &.poison { background-color: $color-poison; }
-  &.ground { background-color: $color-ground; }
-  &.rock { background-color: $color-rock; }
-  &.bug { background-color: $color-bug; }
-  &.ghost { background-color: $color-ghost; }
-  &.steel { background-color: $color-steel; }
-  &.fire { background-color: $color-fire; }
-  &.water { background-color: $color-water; }
-  &.grass { background-color: $color-grass; }
-  &.electric { background-color: $color-electric; }
-  &.psychic { background-color: $color-psychic; }
-  &.ice { background-color: $color-ice; }
-  &.dragon { background-color: $color-dragon; }
-  &.dark { background-color: $color-dark; }
-  &.fairy { background-color: $color-fairy; }
 
   .type-header {
     display: flex;
@@ -46,12 +28,34 @@
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 20px;
     width: 100%;
-    max-width: 1200px;
-    text-decoration: none;
+   
   }
 
   .type-pokemon-card {
-    @include box-style($color-background, $border-radius, 20px, $color-box-shadow);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+
+    &.normal { background-color: $color-normal; }
+    &.fighting { background-color: $color-fighting; }
+    &.flying { background-color: $color-flying; }
+    &.poison { background-color: $color-poison; }
+    &.ground { background-color: $color-ground; }
+    &.rock { background-color: $color-rock; }
+    &.bug { background-color: $color-bug; }
+    &.ghost { background-color: $color-ghost; }
+    &.steel { background-color: $color-steel; }
+    &.fire { background-color: $color-fire; }
+    &.water { background-color: $color-water; }
+    &.grass { background-color: $color-grass; }
+    &.electric { background-color: $color-electric; }
+    &.psychic { background-color: $color-psychic; }
+    &.ice { background-color: $color-ice; }
+    &.dragon { background-color: $color-dragon; }
+    &.dark { background-color: $color-dark; }
+    &.fairy { background-color: $color-fairy; }
 
     img {
       width: 100px;
@@ -60,7 +64,7 @@
 
     p {
       margin: 5px 0;
-      @include text-style($color-text, bold);
+      @include text-style(#333, bold);
     }
   }
 }

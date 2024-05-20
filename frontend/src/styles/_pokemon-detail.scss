@@ -1,114 +1,271 @@
 @import './variables';
 @import './mixins';
 
+.final-boss {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+ 
+}
+
 .pokemon-detail {
-  @include flex-center;
+  display: flex;
   flex-direction: column;
   padding: $padding;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added shadow for better contrast */
+  max-width: 800px; /* Increased max width */
+  width: 100%; /* Full width */
+}
 
-  .pokemon-header {
-    @include flex-center;
-    flex-direction: column;
-    margin-bottom: $padding;
-    align-items: start;
+.pokemon-header {
+  display: flex;
+  justify-content: space-between; /* Space between elements */
+  position: relative;
+  padding: 20px; /* Added padding */
+  border-bottom: 1px solid #ddd; 
+  flex-wrap: wrap;
 
-    img {
-      width: 600px;
-      height: 450px;
-      background-color: #f4d5bf;
-    }
-
-    h2 {
-      margin-top: 10px;
-      font-size: $font-size-large;
-    }
+  h2 {
+    font-size: $font-size-large;
+    margin: 0;
+    font-weight: bold; /* Bold font for the title */
+    color: #333; /* Darker color for the title */
   }
 
-  .pokemon-types,
-  .pokemon-stats,
-  .pokemon-abilities {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: $padding;
-    
+  .pokemon-types {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px; /* Added margin to separate from image */
 
     h3 {
-      margin-bottom: 10px;
       font-size: $font-size-medium;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+      color: #666; /* Color similar to the screenshot */
     }
 
-    
     .types-container {
-      @include flex-center;
-      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      display: flex;
 
       .type-badge {
-        padding: 20px 40px;
-        margin: 5px;
-        border-radius: $border-radius;
-        color: #fff;
-        font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding: 0.5em 1em; /* Adjusted padding */
+        border-radius: 0.5em;
+        background-color: #f0f0f0; /* Adjust the background color as needed */
+        margin-right: 10px; /* Spacing between badges */
+        text-decoration: none;
+        color: #000; /* Adjust the text color as needed */
 
+        .type-icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 0.5em;
+        }
 
-        
-        &.normal { background-color: #dce1e6; }
-        &.fighting { background-color: #f0c3d0; }
-        &.flying { background-color: #dce4f4; }
-        &.poison { background-color: #e6caf2; }
-        &.ground { background-color: #f2c8b4; }
-        &.rock { background-color: #f7eed4; }
-        &.bug { background-color: #eaf4d3; }
-        &.ghost { background-color: #d0d9f4; }
-        &.steel { background-color: #d4edf7; }
-        &.fire { background-color: #f4d5bf; }
-        &.water { background-color: #cbe1f9; }
-        &.grass { background-color: #cdf9c8; }
-        &.electric { background-color: #f4eab8; }
-        &.psychic { background-color: #f2c2c4; }
-        &.ice { background-color: #d6f9f3; }
-        &.dragon { background-color: #c6dff4; }
-        &.dark { background-color: #d3cae3; }
-        &.fairy { background-color: #f9dbf6; }
+        .type-icon {
+          height: 40px;
+        }
+
+        &.normal { background-color: $color-normal; }
+        &.fighting { background-color: $color-fighting; }
+        &.flying { background-color: $color-flying; }
+        &.poison { background-color: $color-poison; }
+        &.ground { background-color: $color-ground; }
+        &.rock { background-color: $color-rock; }
+        &.bug { background-color: $color-bug; }
+        &.ghost { background-color: $color-ghost; }
+        &.steel { background-color: $color-steel; }
+        &.fire { background-color: $color-fire; }
+        &.water { background-color: $color-water; }
+        &.grass { background-color: $color-grass; }
+        &.electric { background-color: $color-electric; }
+        &.psychic { background-color: $color-psychic; }
+        &.ice { background-color: $color-ice; }
+        &.dragon { background-color: $color-dragon; }
+        &.dark { background-color: $color-dark; }
+        &.fairy { background-color: $color-fairy; }
       }
     }
   }
+}
 
-  .pokemon-stats ul {
-    list-style: none;
-    padding: 0;
+.pokemon-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff; /* White background for image section */
 
-    li {
-      margin-bottom: 5px;
-      font-size: $font-size-small;
+  figure {
+    margin: 0;
+    img {
+      border-radius: 10px;
+      width: 200px;
+      height: auto;
     }
   }
 
-  .pokemon-info{
-    display: flex;
-   flex-direction: column;
-    padding: 20px 60px;
+  &.normal { background-color: $color-normal; }
+  &.fighting { background-color: $color-fighting; }
+  &.flying { background-color: $color-flying; }
+  &.poison { background-color: $color-poison; }
+  &.ground { background-color: $color-ground; }
+  &.rock { background-color: $color-rock; }
+  &.bug { background-color: $color-bug; }
+  &.ghost { background-color: $color-ghost; }
+  &.steel { background-color: $color-steel; }
+  &.fire { background-color: $color-fire; }
+  &.water { background-color: $color-water; }
+  &.grass { background-color: $color-grass; }
+  &.electric { background-color: $color-electric; }
+  &.psychic { background-color: $color-psychic; }
+  &.ice { background-color: $color-ice; }
+  &.dragon { background-color: $color-dragon; }
+  &.dark { background-color: $color-dark; }
+  &.fairy { background-color: $color-fairy; }
 }
 
-.pokeman-display{
-    display: flex;
-}
+.pokemon-info {
+  display: flex;
+  justify-content: space-between; /* Space between elements */
+  padding: 20px;
 
-  .pokemon-abilities {
-    .ability {
-      margin-bottom: 15px;
+  .pokemon-stats {
+    margin-bottom: $padding;
 
-      strong {
-        display: block;
-        font-size: $font-size-medium;
+    h3 {
+      font-size: $font-size-medium;
+      text-transform: uppercase;
+      color: #666; /* Color similar to the screenshot */
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
         margin-bottom: 5px;
-      }
-
-      p {
-        margin: 0;
         font-size: $font-size-small;
+        color: #333; /* Darker color for text */
       }
-
-      
     }
   }
 }
+
+.pokemon-abilities {
+  padding: 20px;
+
+  h3 {
+    font-size: $font-size-medium;
+    text-transform: uppercase;
+    color: #666; /* Color similar to the screenshot */
+  }
+
+  .ability-container {
+    margin-top: 10px;
+  }
+
+  .ability {
+    margin-bottom: 15px;
+
+    strong {
+      display: block;
+      font-size: $font-size-medium;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin: 0;
+      font-size: $font-size-small;
+      color: #333; /* Darker color for text */
+    }
+  }
+}
+
+
+  // search css
+
+  // _search.scss
+  .search-input-container {
+    position: relative;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+ 
+  .team-pokemon-name a, h2:hover{
+    color:$primary-color ;
+
+  }
+
+  .logo:hover{
+    color:$primary-color;
+  }
+
+  .search-result {
+    
+     height: 50vh; // Full height of the viewport
+     padding: 20px;
+     text-align: center;
+    .result-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.2s;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+  
+      a {
+        text-decoration: none;
+        color: black;
+  
+        img {
+          width: 150px; 
+          height: auto;
+          margin-bottom: 10px;
+        }
+  
+        .search-result h1{
+          text-align: center;
+        }
+
+        h2 {
+          margin-bottom: 5px;
+          
+        }
+
+       
+  
+        p {
+          font-size: 16px;
+          color: #666;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .search-result .result-card {
+      padding: 10px;
+      img {
+        width: 100px;
+      }
+    }
+  }
+  

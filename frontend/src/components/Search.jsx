@@ -16,15 +16,19 @@ function Search() {
 
   return (
     <form onSubmit={handleSearch} className="search">
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search Pokémon"
-      />
-      <button type="submit" className="search-button">
-        <FontAwesomeIcon icon={faMagnifyingGlass} /> Search
-      </button>
+      <div className="search-input-container">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search Pokémon"
+        />
+        <FontAwesomeIcon 
+          icon={faMagnifyingGlass} 
+          className="search-icon"
+          onClick={handleSearch}
+        />
+      </div>
     </form>
   );
 }

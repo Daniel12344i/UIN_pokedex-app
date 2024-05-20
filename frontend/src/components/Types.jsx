@@ -19,7 +19,6 @@ import dragonIcon from '../assets/dragon.png';
 import darkIcon from '../assets/dark.png';
 import fairyIcon from '../assets/fairy.png';
 
-
 function Types() {
   const [types, setTypes] = useState([]);
 
@@ -50,9 +49,12 @@ function Types() {
     fairy: fairyIcon,
   };
 
+  // Filter out types that don't have an icon or are "unknown"
+  const filteredTypes = types.filter(type => typeIcons[type.name] && type.name !== 'unknown');
+
   return (
     <div className="types-grid">
-      {types.map(type => (
+      {filteredTypes.map(type => (
         <Link key={type.name} to={`/type/${type.name}`} className={`type-card ${type.name}`}>
           <img src={typeIcons[type.name]} alt={type.name} className="type-icon" />
           <p>{type.name.charAt(0).toUpperCase() + type.name.slice(1)}</p>

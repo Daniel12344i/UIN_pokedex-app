@@ -5,3 +5,18 @@
 @import 'main';
 @import 'pokemon-detail';
 @import 'main-pokemons';
+@import 'type';
+
+
+#root{
+  
+    display: flex;
+    justify-content: center;
+  }
+
+ 
+  p:hover,
+  a:hover,
+  li:hover {
+      color:$primary-color ;
+  }

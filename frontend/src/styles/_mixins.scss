@@ -1,11 +1,4 @@
-@mixin box-style($background, $radius, $padding, $shadow) {
-    background-color: $background;
-    border-radius: $radius;
-    padding: $padding;
-    box-shadow: 0 2px 5px $shadow;
-    text-align: center;
-    
-  }
+
   
   @mixin flex-center {
     display: flex;
@@ -19,11 +12,9 @@
     padding: $padding;
     box-shadow: 0 2px 5px $shadow;
     text-align: center;
-    text-decoration: none;
   }
   
   @mixin text-style($color, $weight) {
     color: $color;
     font-weight: $weight;
   }
-  
